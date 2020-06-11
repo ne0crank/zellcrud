@@ -1,0 +1,26 @@
+{
+  "name": "zellcrud",
+  "version": "1.0.0",
+  "description": "new node express mongo crud repo from zellwk.com demo",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ne0crank/zellcrud.git"
+  },
+  "author": "ne0crank@icloud.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ne0crank/zellcrud/issues"
+  },
+  "homepage": "https://github.com/ne0crank/zellcrud#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
