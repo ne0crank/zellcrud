@@ -1,4 +1,4 @@
-## Repo for code from zellwk.com CRUD demo
+## Repo for code from javaguides.net Node.js, Express and MongoDB RESTful CRUD API Tutorial 
 
 [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://ne0crank.github.io/kentmschaeffer)
 
