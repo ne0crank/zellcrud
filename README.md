@@ -16,25 +16,61 @@ Welcome to the first public Node MongoDB Express app server from ne0crank
 
 ## Intro
 
-This project was created from reading the instructions from this [website](https://zellwk.com/blog/crud-express-mongodb/), with a little twist. The demo is based on Star Wars quotes, mine is based on Space Balls...the other movie!
+This project was created from reading the instructions from this [website](https://www.javaguides.net/2020/02/nodejs-express-and-mongodb-restful-crud-api-tutorial.html) without cheating and looking at this [GitHub Repo](https://github.com/RameshMF/node-todo-app).
 
 ## Background
 
 ## Install
 
-This project uses [html](), [css](), [node](http://nodejs.org), and [npm](https://npmjs.com). Go check them out if you don't have them locally installed.
+This project uses [node](http://nodejs.org), [express](https://www.npmjs.com/package/express), [mongo](https://mongodb.com/), [mongoose](https://www.npmjs.com/package/mongoose), and [body-parser](https://www.npmjs.com/package/body-parser). Go check them out if you don't have them locally installed.
 
 ```sh
-$ npm install node mongoose express --save
+$ npm install express body-parser mongoose --save
 ```
 
 ## Usage
 
-Please use at your own risk, this is my first project!
+Please use at your own risk, this is my first **completed** project!
 
 ## API
 
-No API ... yet
+**Create a new entry using Postman:**
+
+Request: POST 
+URL: http://localhost:3300/todos
+BODY: Raw, JSON
+TEXT:
+{
+  "name": "Learning Node.js",
+  "description": "Learning Node.js with an example"
+}
+
+** Retrieve all entries using Postman:**
+
+Request: GET 
+URL: http://localhost:3300/todos
+
+** Retrieve single entry with ID using Postman:**
+
+Request: GET 
+URL: http://localhost:3300/todos/:id
+
+**Update an existing entry with ID using Postman:**
+
+Request: PUT 
+URL: http://localhost:3300/todos/:id
+BODY: Raw, JSON
+TEXT:
+{
+  "name": "Learning Node.js and Express",
+  "description": "Learning Node.js with an example"
+}
+
+** Delete single entry with ID using Postman:**
+
+Request: DELETE 
+URL: http://localhost:3300/todos/:id
+
 
 ### Maintainers
 
