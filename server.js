@@ -1,17 +1,38 @@
 // load modules
 const express = require('express');
-const ballsyApp = express();
+const app = express();
+const bodyParser = require('body-parser');
 
-// run app in browser
-ballsyApp.listen(3300, function() {
-  console.log('app listening at port 3300');
+// parse application
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+// configure the database
+const dbConfig = require('./config/database.config.js');
+const mongoose = require('mongoose');
+
+mongoose.Promise = global.Promise;
+
+// connect to the database
+mongoose.connect(dbConfig.url, {
+  useNewURLParser: true
+}).then(() => {
+  console.log("Successfully connected to the database");
+}).catch(err => {
+  console.log('Could not connect to the database. Existing now...', err);
+  process.exit();
 });
 
 // root endpoint
-ballsyApp.get('/', (req, res) => {
-  res.sendFile(__dirname + '/index.html');
-  // res.send('Hello Woild');
+app.get('/', (req, res) => {
+  res.json({
+    "message": "Welcome to yogurtland"
+  });
 });
 
-// output to console
-console.log('May the Schwartz be with you!');
+require('./app/routes/todo.routes.js')(app);
+
+// run app in browser
+app.listen(3300, () => {
+  console.log('app listening at port 3300');
+});
